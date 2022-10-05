@@ -1,12 +1,26 @@
 package com.solvd.Army;
 
-public class Submarine {
+import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+
+@XmlRootElement(name = "submarine")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Submarine implements Serializable {
 
     private Long id;
     private int immersionDepth;
     private int Fleet_id;
 
     public Submarine() {
+    }
+
+    public Submarine(Long id, int immersionDepth, int fleet_id) {
+        this.id = id;
+        this.immersionDepth = immersionDepth;
+        Fleet_id = fleet_id;
     }
 
     public Long getId() {

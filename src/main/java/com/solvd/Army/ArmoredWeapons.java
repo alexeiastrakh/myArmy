@@ -8,8 +8,18 @@ public class ArmoredWeapons {
     private int crew;
 
     private String nameModel;
+    private int ArmyCorps_id;
 
     public ArmoredWeapons() {
+    }
+
+    public ArmoredWeapons(Long id, int combatWeight, int maximumHighwaySpeed, int crew, String nameModel,int ArmyCorps_id) {
+        this.id = id;
+        this.combatWeight = combatWeight;
+        this.maximumHighwaySpeed = maximumHighwaySpeed;
+        this.crew = crew;
+        this.nameModel = nameModel;
+        this.ArmyCorps_id = ArmyCorps_id;
     }
 
     public Long getId() {
@@ -47,5 +57,16 @@ public class ArmoredWeapons {
 
     public void setNameModel(String nameModel) {
         this.nameModel = nameModel;
+    }
+
+    @Override
+    public String toString() {
+        return "ArmoredWeapons{" +
+                "id=" + id +
+                ", combatWeight=" + combatWeight +
+                ", maximumHighwaySpeed=" + maximumHighwaySpeed +
+                ", crew=" + crew +
+                ", nameModel='" + nameModel + '\'' +
+                '}';
     }
 }

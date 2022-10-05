@@ -1,0 +1,12 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.Army.dao.ISubmarineDAO">
+    <resultMap id="submarine" type="com.solvd.Army.Submarine">
+        <id property="id" column="id"/>
+        <result property="immersionDepth" column="immersionDepth"/>
+        <result property="Fleet_id" column="Fleet_id"/>
+    </resultMap>
+    <select id="getAllSubmarines" resultMap="submarine">
+        SELECT * FROM armydb.submarine
+    </select>
+</mapper>

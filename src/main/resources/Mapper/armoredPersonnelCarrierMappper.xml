@@ -1,0 +1,16 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.Army.dao.IArmoredPersonnelCarrierDAO">
+    <resultMap id="armoredPersonnelCarrier" type="com.solvd.Army.ArmoredPersonnelCarrier">
+        <id property="id" column="id"/>
+        <result property="armament" column="armament"/>
+        <result property="ArmoredWeapons_id" column="ArmoredWeapons_id"/>
+    </resultMap>
+    <select id="getAllArmoredPersonnelCarrier" resultMap="armoredPersonnelCarrier">
+        SELECT * FROM armydb.armoredPersonnelCarrier
+    </select>
+    <select id="getArmoredPersonnelCarrierByArmament" resultMap="armoredPersonnelCarrier">
+        SELECT * FROM armydb.armoredPersonnelCarrier
+        WHERE armament='PKTM machine gun'
+    </select>
+</mapper>

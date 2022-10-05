@@ -31,4 +31,13 @@ public class ArmoredPersonnelCarrier  {
     public void setArmoredWeapons_id(int ArmoredWeapons_id){
         this.ArmoredWeapons_id=ArmoredWeapons_id;
     }
+
+    @Override
+    public String toString() {
+        return "ArmoredPersonnelCarrier{" +
+                "id=" + id +
+                ", armament='" + armament + '\'' +
+                ", ArmoredWeapons_id=" + ArmoredWeapons_id +
+                '}';
+    }
 }

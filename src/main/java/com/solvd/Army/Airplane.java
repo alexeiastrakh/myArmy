@@ -40,4 +40,14 @@ public class Airplane {
     public void setAviation_id(int Aviation_id){
         this.Aviation_id=Aviation_id;
     }
+
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "id=" + id +
+                ", wingspan=" + wingspan +
+                ", wingArea=" + wingArea +
+                ", Aviation_id=" + Aviation_id +
+                '}';
+    }
 }

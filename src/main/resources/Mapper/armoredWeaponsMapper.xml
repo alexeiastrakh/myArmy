@@ -1,0 +1,26 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.Army.dao.IArmoredWeaponsDAO">
+    <resultMap id="armoredWeapons" type="com.solvd.Army.ArmoredWeapons">
+        <id property="id" column="id"/>
+        <result property="combatWeight" column="combatWeight"/>
+        <result property="maximumHighwaySpeed" column="maximumHighwaySpeed"/>
+        <result property="crew" column="crew"/>
+        <result property="nameModel" column="nameModel"/>
+        <result property="ArmyCorps_id" column="ArmyCorps_id"/>
+    </resultMap>
+    <select id="getAllArmoredWeapons" resultMap="armoredWeapons">
+        SELECT * FROM armydb.armoredWeapons
+    </select>
+    <insert id="addArmoredWeapons">
+        INSERT INTO armydb.armoredWeapons (id,combatWeight,maximumHighwaySpeed,crew,nameModel,ArmyCorps_id)
+        VALUES (#{id},#{combatWeight},#{maximumHighwaySpeed},#{crew},#{nameModel},#{ArmyCorps_id})
+    </insert>
+    <update id="updateArmoredWeapons">
+        UPDATE armydb.armoredWeapons SET combatWeight=#{combatWeight}
+        WHERE id=#{id}
+    </update>
+    <delete id="deleteArmoredWeapons">
+        DELETE FROM armydb.armoredWeapons WHERE id=#{id}
+    </delete>
+</mapper>
